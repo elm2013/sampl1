@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "c8e292ba-a585-4b73-b755-8e19d464a54a",
+		"name": "megashid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10076501"
+	},
+	"item": [
+		{
+			"name": "createConnections",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"connection_1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/connections/v1/createConnections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connections",
+						"v1",
+						"createConnections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send data on connenetion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"time\": \"1718870992000\", \"name\": \"ali\", \"value\": \"iot\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/connections/v1/connection_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connections",
+						"v1",
+						"connection_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/connections/v1/connection_3?startTime=2024-06-20T04:09:51&stopTime=2024-06-20T12:09:52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connections",
+						"v1",
+						"connection_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "startTime",
+							"value": "2024-06-20T04:09:51"
+						},
+						{
+							"key": "stopTime",
+							"value": "2024-06-20T12:09:52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete connection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/connections/v1/connection_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connections",
+						"v1",
+						"connection_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit connections",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"parameters\":[\r\n            {\r\n                \"key\": \"name\",\r\n                \"valueType\": \"str\"\r\n             \r\n            },\r\n            {\r\n                \"key\": \"value\",\r\n                \"valueType\": \"int\"\r\n             \r\n            }\r\n        ]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/connections/v1/connection_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"connections",
+						"v1",
+						"connection_3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
